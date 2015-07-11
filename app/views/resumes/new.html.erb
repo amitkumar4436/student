@@ -1,0 +1,63 @@
+<h1> Create your resume here!</h1>
+
+<%= form_for(@resume) do |f| %>
+	<ul>
+		<% @resume.errors.full_messages.each do |error| %>
+			<li><%=error%></li>
+		<%end%>
+	</ul>
+	<p>
+		<%=f.label :name%></br>
+		<%=f.text_field :name%>
+	</p>
+	
+	<p>
+		<%=f.label :department%></br>
+		<%=f.text_field :department %>
+	</p>
+	
+	<p>
+		<%=f.label :college %></br>
+		<%=f.text_field :college%>
+	</p>
+
+	<p>
+		<%=f.label :place %></br>
+		<%=f.text_field :place%>
+	</p>
+
+	<p>
+		<%=f.label :mobile%></br>
+		<%=f.text_field :mobile%>
+	</p>
+
+	<p>
+		<%=f.label :objective%> </br>
+		<%=f.text_field :objective%>
+	</p>
+
+	<p>
+		<%=f.label :education%> </br>
+		<%=f.text_field :education%>
+	</p>
+
+	<p>
+		<%=f.label :skills%></br>
+		<%=f.text_field :skills%>
+	</p>
+
+	<p>
+		<%=f.label :hobbies%></br>
+		<%=f.text_field :hobbies%>
+	</p>
+	
+	<p>
+		<%=f.label :training%></br>
+		<%=f.text_field :training%>
+	</p>
+
+	<p>
+		<%=f.submit "Create Resume", class:"btn btn-success" %>
+	</p>
+	<%end%>
+	<%=link_to "back", resumes_path%>
