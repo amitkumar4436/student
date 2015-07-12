@@ -10,4 +10,6 @@
 <p><%=@resume.hobbies%><r/p>
 <p><%=@resume.training%></p>
 </br>
+<%=link_to "Delete",resume_path(@resume), method: "resume", data:{confirm: "DO YOU WANT TO DELETE RESUME?"} %>
+</br>
 <%= link_to "back",resumes_path%>

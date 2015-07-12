@@ -1,0 +1,9 @@
+<h1>List of Previous Resumes</h1>
+
+<ul id="resumes">
+<% @resumes.each do |resume| %>
+<li>
+<%= link_to resume.name, resume_path(resume) %>
+</li>
+<%end%>
+</ul>
