@@ -11,5 +11,7 @@
 <p><%=@resume.training%></p>
 </br>
 <%=link_to "Delete",resume_path(@resume), method: "resume", data:{confirm: "DO YOU WANT TO DELETE RESUME?"} %>
+<%=link_to "Edit", edit_resume_path(@resume), class: "Edit Resume" %>
+
 </br>
 <%= link_to "back",resumes_path%>
